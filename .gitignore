@@ -4,10 +4,4 @@ target/*
 .idea/workspace.xml
 .idea/misc.xml
 .idea/*
-CreatUV.iml
-grails-app/conf/DataSource.groovy
-CreatUV-grailsPlugins.iml
 stacktrace.log
-#Password Files
-keystone.txt
-.keystone
