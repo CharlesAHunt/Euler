@@ -8,8 +8,8 @@
 
 public class Problem1 {
 
-    public static Integer solve() {
-        Integer answer = 0;
+    public static Double solve() {
+        Double answer = 0.0;
 
         for(int i = 1; i < 1000; i++) {
             if( i % 3 == 0 || i % 5 == 0 ) {
