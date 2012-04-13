@@ -6,9 +6,9 @@
  *     Find the sum of all the multiples of 3 or 5 below 1000.
  */
 
-public class Problem1 {
+public class Problem1 implements Solveable {
 
-    public static Double solve() {
+    public Double solve() {
         Double answer = 0.0;
 
         for(int i = 1; i < 1000; i++) {

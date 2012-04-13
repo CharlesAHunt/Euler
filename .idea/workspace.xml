@@ -61,16 +61,34 @@
       <file leaf-file-name="Problem1.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Problem1.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="29" selection-start="202" selection-end="202" vertical-scroll-proportion="0.0">
+            <state line="10" column="10" selection-start="297" selection-end="297" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Problem2.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Problem2.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Problem2.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="0" selection-start="542" selection-end="542" vertical-scroll-proportion="0.33180252">
+            <state line="11" column="10" selection-start="427" selection-end="427" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Problem3.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Problem3.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="25" column="27" selection-start="699" selection-end="699" vertical-scroll-proportion="0.4879449">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Solveable.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Solveable.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="3" column="18" selection-start="41" selection-end="41" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -79,7 +97,7 @@
       <file leaf-file-name="Main.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="53" selection-start="184" selection-end="184" vertical-scroll-proportion="0.0">
+            <state line="17" column="71" selection-start="468" selection-end="468" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -106,8 +124,10 @@
       <list>
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/src/Problem1.java" />
-        <option value="$PROJECT_DIR$/src/Main.java" />
         <option value="$PROJECT_DIR$/src/Problem2.java" />
+        <option value="$PROJECT_DIR$/src/Main.java" />
+        <option value="$PROJECT_DIR$/src/Solveable.java" />
+        <option value="$PROJECT_DIR$/src/Problem3.java" />
       </list>
     </option>
   </component>
@@ -145,12 +165,16 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope">
-        <subPane subId="Project Files">
+      <pane id="PackagesPane">
+        <subPane>
           <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ProjectEuler" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ProjectEuler" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
@@ -189,16 +213,12 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane">
-        <subPane>
+      <pane id="Scope">
+        <subPane subId="Project Files">
           <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ProjectEuler" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ProjectEuler" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
@@ -526,23 +546,65 @@
         <state line="7" column="0" selection-start="86" selection-end="86" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Problem2.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="10" selection-start="427" selection-end="427" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Problem1.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="29" selection-start="202" selection-end="202" vertical-scroll-proportion="0.0">
+        <state line="10" column="10" selection-start="297" selection-end="297" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="53" selection-start="184" selection-end="184" vertical-scroll-proportion="0.0">
+        <state line="17" column="71" selection-start="468" selection-end="468" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Problem2.java">
+    <entry file="jar://C:/glassfish3/jdk7/jre/lib/rt.jar!/java/lang/Math.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="0" selection-start="542" selection-end="542" vertical-scroll-proportion="0.33180252">
+        <state line="36" column="25" selection-start="1267" selection-end="1267" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/glassfish3/jdk7/jre/lib/rt.jar!/java/lang/Double.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="19" selection-start="153" selection-end="153" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Solveable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="18" selection-start="41" selection-end="41" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/glassfish3/jdk7/jre/lib/rt.jar!/java/lang/NumberFormatException.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="0" selection-start="531" selection-end="531" vertical-scroll-proportion="0.35416666">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/glassfish3/jdk7/jre/lib/rt.jar!/java/lang/Integer.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="35" column="22" selection-start="1500" selection-end="1500" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Problem3.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="25" column="27" selection-start="699" selection-end="699" vertical-scroll-proportion="0.4879449">
           <folding />
         </state>
       </provider>
