@@ -11,12 +11,16 @@ public class Main {
     }
 
     private static void runProblemSets() {
-        System.out.println("Running problem sets...");
+        show("Running problem sets...");
 
-        System.out.println("Answer to problem 1: " + new Problem1().solve());
-        System.out.println("Answer to problem 2: " + new Problem2().solve());
-        System.out.println("Answer to problem 3: " + new Problem3().solve());
+        show("Answer to problem 1: " + new Problem1().solve());
+        show("Answer to problem 2: " + new Problem2().solve());
+        show("Answer to problem 3: " + new Problem3().solve());
 
-        System.out.println("Problem sets solved.");
+        show("Problem sets solved.");
+    }
+
+    private static void show(String text) {
+        System.out.println(text);
     }
 }

@@ -8,8 +8,8 @@
 public class Problem3 implements Solveable {
 
     public Long solve() {
-        Long numberToFind = 600851475143L;
-        Long answer = numberToFind;
+        Long number = 600851475143L;
+        Long answer = number;
         boolean isWhole = false;
         double attemptedWhole;
 
@@ -25,13 +25,25 @@ public class Problem3 implements Solveable {
 
         while(answer > 1) {
 
-            if(numberToFind % answer == 0) {
-                break;
+            if(number % answer == 0) {
+                if(isPrime(answer))
+                    break;
             }
 
             answer--;
         }
 
         return answer;
+    }
+
+    private boolean isPrime(Long number) {
+
+        for (Long i = 2L; i < number; i++) {
+            if(number % i == 0)
+                return false;
+
+        }
+
+        return true;
     }
 }
