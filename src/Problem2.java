@@ -11,6 +11,7 @@
 public class Problem2 implements Solveable {
 
     public Double solve() {
+
         Double answer = 0.0;
         double first = 1, second = 2, sum = 0;
 

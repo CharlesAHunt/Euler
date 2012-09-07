@@ -9,14 +9,13 @@
 public class Problem4 {
 
     public Long solve() {
-        Long answer = null;
+
         Long longestSoFar = 0L;
 
         for (long i = 999; i > 500; i--) {
             for (long j = 999; j > 500; j--) {
-                if (isPalindrome(i * j)) {
-                    if ((i * j) > longestSoFar)
-                        longestSoFar = i * j;
+                if (isPalindrome(i * j) && (i * j) > longestSoFar) {
+                    longestSoFar = i * j;
                 }
             }
         }

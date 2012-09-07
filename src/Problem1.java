@@ -10,6 +10,7 @@
 public class Problem1 implements Solveable {
 
     public Double solve() {
+
         Double answer = 0.0;
 
         for (int i = 1; i < 1000; i++) {
