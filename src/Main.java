@@ -11,6 +11,7 @@ public class Main {
     }
 
     private static void runProblemSets() {
+
         show("Running problem sets...");
 
         show("Answer to problem 1: " + new Problem1().solve());
@@ -22,8 +23,12 @@ public class Main {
         show("Answer to problem 7: " + new Problem7().solve());
         show("Answer to problem 8: " + new Problem8().solve());
         show("Answer to problem 9: " + new Problem9().solve());
+        show("Answer to problem 10: " + new Problem10().solve());
+        show("Answer to problem 11: " + new Problem11().solve());
+        show("Answer to problem 12: " + new Problem12().solve());
 
         show("Problem sets solved.");
+
     }
 
     private static void show(String text) {
