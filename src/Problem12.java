@@ -27,13 +27,43 @@
 
 public class Problem12 implements Solveable {
 
-    public Double solve() {
+    public Long solve() {
 
-        int largestProduct = 0;
+        long number;
+        int numberOfDivisors;
+        long triangleNumber;
 
+        for (long i = 1; true; i++) {
+            triangleNumber = getTriangleNumber(i);
+            if (i % 2 == 0 && i % 3 == 0 && i % 5 == 0) {
+                numberOfDivisors = numberOfDivisors(triangleNumber);
+                if (numberOfDivisors > 500) {
+                    number = triangleNumber;
+                    break;
+                }
+            }
+        }
+        return number;
+    }
 
+    private int numberOfDivisors(long number) {
+        int divisorsSoFar = 2;
+        for(long num = 2; num <= Math.sqrt(number); num++) {
+            if(number % num == 0) {
+                divisorsSoFar++;
+            }
+        }
+        return divisorsSoFar;
+    }
 
-        return Double.parseDouble(Long.toString(largestProduct));
+    private long getTriangleNumber(long numberFrom) {
 
+        long triangleNumber = 0;
+
+        for(int j = 1; j <= numberFrom; j++) {
+            triangleNumber += j;
+        }
+
+        return triangleNumber;
     }
 }
