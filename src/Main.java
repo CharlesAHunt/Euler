@@ -14,18 +14,19 @@ public class Main {
 
         show("Running problem sets...");
 
-        show("Answer to problem 1: " + new Problem1().solve());
-        show("Answer to problem 2: " + new Problem2().solve());
-        show("Answer to problem 3: " + new Problem3().solve());
-        show("Answer to problem 4: " + new Problem4().solve());
-        show("Answer to problem 5: " + new Problem5().solve());
-        show("Answer to problem 6: " + new Problem6().solve());
-        show("Answer to problem 7: " + new Problem7().solve());
-        show("Answer to problem 8: " + new Problem8().solve());
-        show("Answer to problem 9: " + new Problem9().solve());
-        show("Answer to problem 10: " + new Problem10().solve());
-        show("Answer to problem 11: " + new Problem11().solve());
-        show("Answer to problem 12: " + new Problem12().solve());
+//        show("Answer to problem 1: " + new Problem1().solve());
+//        show("Answer to problem 2: " + new Problem2().solve());
+//        show("Answer to problem 3: " + new Problem3().solve());
+//        show("Answer to problem 4: " + new Problem4().solve());
+//        show("Answer to problem 5: " + new Problem5().solve());
+//        show("Answer to problem 6: " + new Problem6().solve());
+//        show("Answer to problem 7: " + new Problem7().solve());
+//        show("Answer to problem 8: " + new Problem8().solve());
+//        show("Answer to problem 9: " + new Problem9().solve());
+//        show("Answer to problem 10: " + new Problem10().solve());
+//        show("Answer to problem 11: " + new Problem11().solve());
+//        show("Answer to problem 12: " + new Problem12().solve());
+        show("Answer to problem 13: " + new Problem13().solve());
 
         show("Problem sets solved.");
 
