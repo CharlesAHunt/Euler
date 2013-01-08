@@ -26,7 +26,8 @@ public class Main {
 //        show("Answer to problem 10: " + new Problem10().solve());
 //        show("Answer to problem 11: " + new Problem11().solve());
 //        show("Answer to problem 12: " + new Problem12().solve());
-        show("Answer to problem 13: " + new Problem13().solve());
+//        show("Answer to problem 13: " + new Problem13().solve());
+        show("Answer to problem 14: " + new Problem14().solve());
 
         show("Problem sets solved.");
 
