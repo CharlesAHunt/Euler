@@ -7,31 +7,38 @@ package utils;
 
 public class TreeUtil {
 
-    public static Node buildTree(String rawTreeData) {
-        int row = 1;
-        Node root = null;
+    public static Node getTree(String rawTreeData) {
+
+        Node root = new Node();
         String[] numbers = rawTreeData.split(" ");
 
-        for (int i = 1; i <= numbers.length; i++) {
-
-            if (numbers[i].equals("\n"))
-                row++;
-
-            Node node = new Node();
-            node.row = row;
-            //Integer.parseInt(numbers[i - 1]
-
-            if (i == 1)
-                root = node;
-        }
+        root.value = Integer.parseInt(numbers[0]);
+        root.leftChild = buildTree(numbers, 0, 1, 0);
+        root.rightChild = buildTree(numbers, 0, 1, 1);
 
         return root;
+    }
+
+    public static Node buildTree(String[] numberTree, Integer oldIndex, Integer oldRow, Integer adder) {
+
+        Integer newIndex = (oldIndex + oldRow + adder);
+        Integer newRow = oldRow + 1;
+
+        if(newIndex >= numberTree.length)
+            return null;
+
+        Node child = new Node();
+
+        child.value = Integer.parseInt(numberTree[newIndex]);
+        child.leftChild = buildTree(numberTree, newIndex, newRow, 0);
+        child.rightChild = buildTree(numberTree, newIndex, newRow, 1);
+
+        return child;
     }
 
     public static class Node {
 
         public int value;
-        public int row;
         public Node leftChild;
         public Node rightChild;
 
