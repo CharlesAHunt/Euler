@@ -3,19 +3,22 @@ import utils.TreeUtil;
 /**
  * User: Charles
  * Date: 1/26/13
+ *
+ * Find the maximum total from top to bottom of the triangle below:
  */
 
 
 public class Problem18 implements Solveable {
 
+    private static Long largestPathSum = 0L;
 
     public Long solve() {
 
         TreeUtil.Node node = TreeUtil.getTree(getRawTree());
 
-        //Todo now find the max path via node
+        get(node, largestPathSum);
 
-        return 0L;
+        return largestPathSum;
 
     }
 
@@ -35,5 +38,16 @@ public class Problem18 implements Solveable {
                " 91 71 52 38 17 14 91 43 58 50 27 29 48" +
                " 63 66 04 68 89 53 67 30 73 16 69 87 40 31" +
                " 04 62 98 27 23 09 70 98 73 93 38 53 60 04 23";
+    }
+
+    public void get(TreeUtil.Node node, Long totalSoFar) {
+        totalSoFar = totalSoFar + node.value;
+        if(node.leftChild == null) {
+            if(totalSoFar > largestPathSum)
+                largestPathSum = totalSoFar;
+            return;
+        }
+         get(node.leftChild, totalSoFar);
+         get(node.rightChild, totalSoFar);
     }
 }
