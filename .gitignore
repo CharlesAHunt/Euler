@@ -1,9 +1,6 @@
 # IDEA FILES
 /out
 /target
-.idea/workspace.xml
-.idea/misc.xml
-.idea/modules.xml
-.idea/scopes
 *.iml
 *.log
+/.idea
