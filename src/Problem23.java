@@ -21,8 +21,16 @@ public class Problem23 implements Solveable {
 
         Long result = 0L;
 
+        for(Integer number = 1; number < 28123; number++) {
+            if(isSumOfTwoAbundantNumbers())
+                result += number;
+        }
 
         return result;
 
+    }
+
+    private boolean isSumOfTwoAbundantNumbers() {
+        return false;//todo
     }
 }
