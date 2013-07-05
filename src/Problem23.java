@@ -51,6 +51,17 @@ public class Problem23 implements Solveable {
 
     private void setAbundantNumbers() {
         abundantNumbers = new ArrayList<Integer>();
-        //todo fill the list
+
+        for(int number = 2; number <= 28123; number++) {
+            int sumOfDivisors = 1;
+            for(int divisor = 2; divisor <= number/2; divisor++) {
+                if(number % divisor == 0) {
+                    sumOfDivisors += divisor;
+                }
+            }
+            if(sumOfDivisors > number)
+                abundantNumbers.add(number);
+        }
+
     }
 }
