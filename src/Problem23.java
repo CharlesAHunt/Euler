@@ -1,3 +1,8 @@
+import com.sun.jmx.remote.internal.ArrayQueue;
+
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * User: Charles
  * Date: 6/10/13
@@ -17,12 +22,15 @@
  */
 public class Problem23 implements Solveable {
 
+    private List<Integer> abundantNumbers = null;
+
     public Long solve() {
 
+        setAbundantNumbers();
         Long result = 0L;
 
         for(Integer number = 1; number < 28123; number++) {
-            if(isSumOfTwoAbundantNumbers())
+            if(!isSumOfTwoAbundantNumbers(number))
                 result += number;
         }
 
@@ -30,7 +38,19 @@ public class Problem23 implements Solveable {
 
     }
 
-    private boolean isSumOfTwoAbundantNumbers() {
-        return false;//todo
+    private boolean isSumOfTwoAbundantNumbers(Integer number) {
+        for (Integer firstNumber : abundantNumbers) {
+            for(Integer secondNumber : abundantNumbers) {
+                if((firstNumber + secondNumber) == number)
+                    return true;
+            }
+        }
+
+        return false;
+    }
+
+    private void setAbundantNumbers() {
+        abundantNumbers = new ArrayList<Integer>();
+        //todo fill the list
     }
 }
