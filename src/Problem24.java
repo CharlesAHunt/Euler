@@ -1,5 +1,4 @@
-import java.util.LinkedHashSet;
-import java.util.Set;
+import java.util.*;
 
 /**
  * User: Charles
@@ -15,24 +14,47 @@ import java.util.Set;
  */
 public class Problem24 implements Solveable {
 
-    public Long solve() {
+    public String solve() {
 
-        Long result = 0L;
-        Integer nthPermutation = 0;
-        StringBuilder permutationString = new StringBuilder();
-        Set<Integer> permuteSet = new LinkedHashSet<Integer>();
-        for () {
-            for (int index = 0; index < permuteSet.size(); index++) {
-                permutationString.append(nextMin());
+        List<Integer> permutation = new ArrayList<Integer>();
+        for (Integer member = 0; member < 10; member++) {
+            permutation.add(member);
+        }
+        int permutationLength = permutation.size();
+        int remain = 1000000 - 1;
+        StringBuilder permNum = new StringBuilder();
+
+        List<Integer> numbers = new ArrayList<Integer>();
+
+        for (int i = 0; i < permutationLength; i++) {
+            numbers.add(i);
+        }
+
+        for (int i = 1; i < permutationLength; i++) {
+            int j = remain / factorial(permutationLength - i);
+            remain = remain % factorial(permutationLength - i);
+            permNum.append(numbers.get(j));
+            numbers.remove(j);
+            if (remain == 0) {
+                break;
             }
         }
 
-        return result;
+        for (Integer number : numbers) {
+            permNum.append(number);
+        }
 
+        return permNum.toString();
     }
 
-    private Integer nextMin() {
-        return 0;
-    }
+    private int factorial(int number) {
+        if (number < 1)
+            return 0;
 
+        int root = 1;
+        for (int inc = 1; inc <= number; inc++) {
+            root = root * inc;
+        }
+        return root;
+    }
 }

@@ -4,6 +4,6 @@
  */
 public interface Solveable {
 
-    public Number solve();
+    public Object solve();
 
 }
