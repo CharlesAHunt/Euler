@@ -37,7 +37,8 @@ public class Main {
 //        show("Answer to problem 21: " + new Problem21().solve());
 //        show("Answer to problem 22: " + new Problem22().solve());
 //        show("Answer to problem 23: " + new Problem23().solve());
-        show("Answer to problem 24: " + new Problem24().solve());
+//        show("Answer to problem 24: " + new Problem24().solve());
+        show("Answer to problem 25: " + new Problem25().solve());
 
         show("Problem sets solved.");
 
