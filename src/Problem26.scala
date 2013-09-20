@@ -23,6 +23,11 @@ class Problem26 {
   def solve(): String = {
 
     val solution: Int = 0
+
+    for() {
+      val
+    }
+
     solution.toString
 
   }
