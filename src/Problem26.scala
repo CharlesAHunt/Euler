@@ -18,18 +18,45 @@ Where 0.1(6) means 0.166666..., and has a 1-digit recurring cycle. It can be see
 Find the value of d < 1000 for which 1/d contains the longest recurring cycle in its decimal fraction part.
  */
 
-class Problem26 {
+class Problem26 extends Solveable {
 
   def solve(): String = {
 
-    val solution: Int = 0
+    var patterns: Seq[String] = Seq()
+    var denomWithLongestCycle = 0
+    var longestCycle = 0
 
-    for() {
-      val
+    for(i <- 1 until 1000) {
+        val fraction: BigDecimal = 1.0/i
+        val fracString:String = fraction.toString().split('.').toList(1)  //get the fractional part
+        var lastElem:String = ""
+        fracString.foreach{ e =>
+            patterns = patterns:+(lastElem.toString().concat(e.toString()))
+            lastElem = patterns.last
+        }
+        val longestInCurrentPattern = patternFind(patterns).size
+        if(longestInCurrentPattern > longestCycle) {
+            denomWithLongestCycle = i
+            longestCycle = longestInCurrentPattern
+        }
+        patterns = Seq()
     }
 
-    solution.toString
+    denomWithLongestCycle.toString
 
   }
 
+  def patternFind(patterns: Seq[String] ):String = {
+     var isMatch = true
+     patterns.foreach{ e =>
+         val pattern = e.*(20)
+         patterns.foreach{ e2 =>
+            if(e2.length > e.length) {
+              if(pattern.slice(0, e2.length) != e2) isMatch = false
+            }
+         }
+         if(isMatch == true) return e
+     }
+     return ""
+  }
 }
