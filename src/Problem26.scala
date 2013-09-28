@@ -1,3 +1,6 @@
+import scala._
+import scala.math.BigDecimal.RoundingMode
+
 /**
  * User: Charles
  * Date: 9/4/13
@@ -22,41 +25,16 @@ class Problem26 extends Solveable {
 
   def solve(): String = {
 
-    var patterns: Seq[String] = Seq()
-    var denomWithLongestCycle = 0
-    var longestCycle = 0
+    //a map of numbers and their decimal pattern -> Fermat’s little theorem says: 1/d has a cycle of n digits if 10^n−1 mod d = 0 for prime d (or 10^n mod d = 1)
+    val cycleMap = (1 until 1000).map(i =>
+      //returns element from 1-2000 that satisfies (10^_ % i) = 0
+      (1 to 2000).find(BigInt(10).modPow(_, i) == 1)
+    )
 
-    for(i <- 1 until 1000) {
-        val fraction: BigDecimal = 1.0/i
-        val fracString:String = fraction.toString().split('.').toList(1)  //get the fractional part
-        var lastElem:String = ""
-        fracString.foreach{ e =>
-            patterns = patterns:+(lastElem.toString().concat(e.toString()))
-            lastElem = patterns.last
-        }
-        val longestInCurrentPattern = patternFind(patterns).size
-        if(longestInCurrentPattern > longestCycle) {
-            denomWithLongestCycle = i
-            longestCycle = longestInCurrentPattern
-        }
-        patterns = Seq()
-    }
-
-    denomWithLongestCycle.toString
-
+    //flatten the map and find the greatest, then get the index +1 which is the number associated with that decimal length
+    (1 + cycleMap.indexOf(Some(cycleMap.flatten.max))).toString
   }
 
-  def patternFind(patterns: Seq[String] ):String = {
-     var isMatch = true
-     patterns.foreach{ e =>
-         val pattern = e.*(20)
-         patterns.foreach{ e2 =>
-            if(e2.length > e.length) {
-              if(pattern.slice(0, e2.length) != e2) isMatch = false
-            }
-         }
-         if(isMatch == true) return e
-     }
-     return ""
-  }
 }
+
+
