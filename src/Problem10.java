@@ -1,3 +1,5 @@
+import utils.PrimeUtil;
+
 /**
  * User: Charles
  * Date: 9/16/12
@@ -16,7 +18,7 @@ public class Problem10 implements Solveable {
 
         while (true) {
 
-            if (isPrime(number))   {
+            if (PrimeUtil.isPrime(number))   {
                 primesTotal += number;
             }
 
@@ -27,16 +29,5 @@ public class Problem10 implements Solveable {
         }
 
         return Double.parseDouble(Long.toString(primesTotal));
-    }
-
-    private boolean isPrime(int number) {
-
-        for (int i = 2; i*i <= number; i++) {
-            if (number % i == 0) {
-                return false;
-            }
-        }
-
-        return true;
     }
 }
