@@ -24,16 +24,17 @@ class Problem27 extends Solveable {
     var solution = 0
     var largestSoFar = 0
 
-    for (n:Int <- 0 to 100) {
-      var consecutivePrimes = 0
-      for (a:Int <- 0 to 1000) {
-        for(b:Int <- 0 to 1000) {
-          if(PrimeUtil.isPrime((n*n)+(a*n)+b))
-            consecutivePrimes = consecutivePrimes + 1
-          else if(consecutivePrimes > largestSoFar) {
-            largestSoFar = consecutivePrimes
-            solution = a*b
-          }
+    for (a:Int <- -1000 to 1000) {
+      for(b:Int <- -1000 to 1000) {
+
+        var n = 0
+        while(PrimeUtil.isPrime(Math.abs((n*n)+(a*n)+b))) {
+          n = n + 1
+        }
+
+        if(n > largestSoFar) {
+          largestSoFar = n
+          solution = a*b
         }
       }
     }
