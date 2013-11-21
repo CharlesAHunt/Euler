@@ -16,8 +16,8 @@ class Problem28 extends Solveable {
   def solve(): String = {
 
     var arrayDiags: Seq[Int] = Seq(1)
-    var gap = 1
-    var valueToAdd = 2
+    var gap = 2
+    var valueToAdd = 1
     for(  a <- 2 to 1002001  ) {
 
       for(  b <- 1 to 4  ) {
