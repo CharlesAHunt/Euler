@@ -18,14 +18,15 @@ class Problem28 extends Solveable {
     var arrayDiags: Seq[Int] = Seq(1)
     var gap = 2
     var valueToAdd = 1
-    for(  a <- 2 to 1002001  ) {
+    val maxEntriesInArray = 1002001
+    for(  a <- 2 to maxEntriesInArray  ) {
 
       for(  b <- 1 to 4  ) {
         valueToAdd = valueToAdd + gap
         arrayDiags = arrayDiags:+valueToAdd
       }
 
-      if(valueToAdd >= 1002001)
+      if(valueToAdd >= maxEntriesInArray)
         return arrayDiags.foldLeft(0)(_ + _).toString
 
       gap = gap + 2
