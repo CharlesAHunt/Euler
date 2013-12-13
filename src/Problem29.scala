@@ -16,9 +16,16 @@ class Problem29 extends Solveable {
 
   def solve(): String = {
 
-    //todo
+    var valueList: List[Double] = List()
 
-    None.toString
+    for(i <- 2 to 100) {
+      for(j <- 2 to 100) {
+        if(!valueList.contains(Math.pow(i,j)))
+          valueList = Math.pow(i,j) :: valueList
+      }
+    }
+
+    valueList.size.toString
 
   }
 
