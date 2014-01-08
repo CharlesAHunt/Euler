@@ -15,14 +15,18 @@ class Problem30 {
 
   def solve(): String = {
 
-    var sumOfFifthNumbers: List[Int] = List()
+    var sumOfFifthList: List[Int] = List()
 
     for(j <- 2 to 999999) {
-      if((Math.pow(j.toString.charAt(0).toInt,5))+ (Math.pow(j.toString.charAt(1).toInt,5)) + (Math.pow(j.toString.charAt(2).toInt,5)) + (Math.pow(j.toString.charAt(3).toInt,5)) == j )
-        sumOfFifthNumbers = j :: sumOfFifthNumbers
+
+      val sumOfFifthPowers = j.toString.foldLeft(0) { (z, i) =>  z + Math.pow(Integer.parseInt(i.toString),5).toInt  }
+
+      if(sumOfFifthPowers == j) {
+        sumOfFifthList = j :: sumOfFifthList
+      }
     }
 
-    sumOfFifthNumbers.foldLeft(0)(_+_).toString
+    sumOfFifthList.sum.toString
 
   }
 
