@@ -12,30 +12,25 @@ How many different ways can £2 be made using any number of coins?
  */
 class Problem31 {
 
-  val p1 = 1
-  val p2 = 2
-  val p5 = 5
-  val p10 = 10
-  val p20 = 20
-  val p50 = 50
-  val l1 = 100
-  val l2 = 200
-
-
   def solve(): String = {
 
-    val answer: Int = 0
-    val currencyList: List[Integer] = List(p1,p2,p5,p10,p20,p50,l1,l2)
-    answer.toString
+    val r = numberOfCombos(List(1, 2, 5, 10, 20, 50, 100, 200), 200)
+
+    r.toString
 
   }
 
-  //Hmm maybe iterate around a list of 8 coins where each position revolves from 0-200 for all possible combos and if == 00 then increment acc
-  def build(): Integer = {
+  def numberOfCombos(denominations: List[Int], total: Int): Int = denominations match {
+    case h :: t =>
 
-      build()
+      if (h > total)
+        0
+      else if (total == h)
+        1
+      else
+        numberOfCombos(denominations, total - h) + numberOfCombos(t, total)
 
-
+    case _ => 0
   }
 
 }
