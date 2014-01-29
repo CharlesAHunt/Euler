@@ -21,14 +21,14 @@ class Problem31 {
   }
 
   def numberOfCombos(denominations: List[Int], total: Int): Int = denominations match {
-    case h :: t =>
+    case head :: tail =>
 
-      if (h > total)
+      if (head > total)
         0
-      else if (total == h)
+      else if (total == head)
         1
       else
-        numberOfCombos(denominations, total - h) + numberOfCombos(t, total)
+        numberOfCombos(denominations, total - head) + numberOfCombos(tail, total)
 
     case _ => 0
   }
