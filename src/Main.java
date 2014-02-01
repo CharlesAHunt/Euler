@@ -45,6 +45,7 @@ public class Main {
 //        show(label(29) + new Problem29().solve());
 //        show(label(30) + new Problem30().solve());
         show(label(31) + new Problem31().solve());
+        show(label(32) + new Problem32().solve());
         show("\nProblem sets solved.");
 
     }
