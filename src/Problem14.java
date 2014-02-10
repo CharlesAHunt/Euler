@@ -42,7 +42,7 @@ public class Problem14 implements Solveable {
                 thisSequence++;
 
             }
-                              //todo will have to add 1
+
             if(thisSequence > highestSequence)  {
                 highestSequence = thisSequence;
                 numberWithHighestSequence = number;

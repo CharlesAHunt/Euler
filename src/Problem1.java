@@ -12,9 +12,9 @@ public class Problem1 implements Solveable {
 
         Double answer = 0.0;
 
-        for (int i = 1; i < 1000; i++) {
-            if (i % 3 == 0 || i % 5 == 0) {
-                answer = answer + i;
+        for (int index = 1; index < 1000; index++) {
+            if (index % 3 == 0 || index % 5 == 0) {
+                answer = answer + index;
             }
         }
 
