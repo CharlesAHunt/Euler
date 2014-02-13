@@ -13,40 +13,41 @@ class Problem32 extends Solveable {
 
   def solve(): String = {
 
-    //= ((0 to 999).filter(_ % 5 == 0) ++ ((0 to 999).filter(_ % 3 == 0))).distinct.foldLeft(0)(_ + _)
+    var products: List[Int] = List()
 
-    var nums: Set[Int] = Set()
-
-    for(i <- 1 until 987) {
-      for(j <- 1 until 987) {
-        if(isPandigital(i, j, i*j)) {
-          nums = nums + (i*j)
+    for(i <- 1 until 9876) {
+      for(j <- 1 until 98) {
+        val item = i.toString+j.toString+(i*j).toString
+        if(isPandigital(item)) {
+          if(!products.contains(i*j)) {
+            products = (i*j) :: products
+          }
         }
       }
     }
 
-    nums.sum.toString
+    products.sum.toString
   }
 
-  def isPandigital(i :Int, j :Int, k :Int): Boolean = {
-    var stringConcat = i.toString + j.toString + k.toString
-    stringConcat = stringConcat.filter(i => dupInList(stringConcat, i.charValue()))
-    //println(stringConcat.length)
-    if(stringConcat.length < 9)
+  def isPandigital(stringConcat : String): Boolean = {
+    if(stringConcat.contains("0") || stringConcat.length < 9 || stringConcat.length > 9)
+      false
+
+    val newStringConcat = stringConcat.filter(!isDuplicate(stringConcat, _))
+
+    if(newStringConcat.length != 9 || stringConcat.contains("0"))
       false
     else
       true
   }
 
-  def dupInList(stringConcat: String, i : Int): Boolean = {
+  def isDuplicate(stringConcat: String, i : Char): Boolean = {
     var count:Int = 0
-    stringConcat.foreach(j => if(j.charValue() == i){count+=1})
-    //println(stringConcat + "  :  " + count + "   :" + i)
+    stringConcat.foreach(j => if(j.charValue() == i.charValue()){count+=1})
     if(count > 1)
       true
     else
       false
-
   }
 
 }
