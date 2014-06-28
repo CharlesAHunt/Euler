@@ -49,5 +49,4 @@ class Problem32 extends Solveable {
     else
       false
   }
-
 }

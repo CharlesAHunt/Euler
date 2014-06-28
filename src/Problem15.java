@@ -10,11 +10,11 @@
 
 public class Problem15 implements Solveable {
 
-    private int WIDTH = 20;
-    private int HEIGHT = 20;
+    private int ROWS = 20;
+    private int COLUMNS = 20;
 
     public Long solve() {
-        return get(2*WIDTH, HEIGHT);
+        return get(2*ROWS, COLUMNS);
     }
 
     public long get(int row, int column) {
